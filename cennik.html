@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper blue">
+              <a href="main.html" class="brand-logo">PPC Bros</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="cennik.html">Cenník</a></li>
+                <li><a href="covieme.html">Čo vieme</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+              </ul>
+            </div>
+        </nav>
+        <div class="form-container">
+            <form action="mailto:michal.hanusniak@aiesec.cz" method="get" enctype="text/plain">
+                <h3>50 € na mesiac</h3>
+                <div>Cena zahrňuje mesačnú správu účtu a konzultácie pre oprimalizíciu kampaní a celkového chodu účtu.</div>
+                <button type="submit" onclick="SendMail()">Napíšte nám</button>
+            </form>
+        </div>
+        
+        </div>
+        <hr>
+        <div class="row">
+          
+          <div class="col s4">PPC Bros © Copyright 2022</div>
+          <div class="col s4">
+            <div class="center-align">
+              <i class="fa fa-facebook-square" style="font-size:36px"></i>
+              <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+              <i class="fa fa-instagram" style="font-size:36px"></i>
+            </div>
+            
+          </div>
+          <div class="col s4"><div class="right-align">info@ppcbros.sk</div></div>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/smtp.js"></script>
+    <script>
+      function SendMail(){
+        var body = document.getElementById("Message").value;
+        var SubjectLine = document.getElementById("Subject").value;
+        var Jaro = document.getElementById("jaro").value;
+        window.location.href = "mailto:michal.hanusniak@aiesec.cz?subject="+SubjectLine+"&body="+body+Jaro;
+      }
+        
+    </script>
+</body>
+</html>
